@@ -15,7 +15,7 @@ class TestPatternAlternative(unittest.TestCase):
 
     def test_information_extract(self):
 
-        info = walk(self.driver, "https://mangalivre.net/ler/hinowa-ga-yuku/online/310236/capitulo-27#/!page0")
+        info = walk(self.driver, "https://mangalivre.net/ler/adamas-no-majo-tachi/online/165087/capitulo-1")
         print(info)
 
         self.assertTrue(type(info)== dict)
