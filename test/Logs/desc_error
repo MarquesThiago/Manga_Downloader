@@ -1,0 +1,15 @@
+selenium.common.exceptions.TimeoutException
+
+error de time out 
+
+IndexError
+se for elements
+
+selenium.common.exceptions.NoSuchElementException
+elemento não encontrado
+
+from selenium.webdriver.remote.webelement import WebElement
+elementos do find
+
+selenium.common.exceptions.ElementNotInteractableException
+elemento não interativo
