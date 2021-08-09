@@ -8,7 +8,7 @@ def download_images(url, name, page, name_destiny):
 
     counter = 0
 
-    def save(self, url, name, page, name_destiny = None):
+    def save(url, name, page, name_destiny = None):
         if name_destiny == None:
             name_destiny = name
 
@@ -31,13 +31,13 @@ def download_images(url, name, page, name_destiny):
                 return False
         return True    
 
-    def _created_path(self, name):
+    def _created_path(name):
         destiny = path_abs(__file__,'../../Media/images/{name}')
         if not os.path.exists(destiny):
             os.makedirs(destiny)
         return destiny
 
-    def _zero_counter(self):
+    def _zero_counter():
         counter = 0
     
     return save(url, name, page, name_destiny)
