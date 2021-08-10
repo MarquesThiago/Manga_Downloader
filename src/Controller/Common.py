@@ -20,8 +20,6 @@ def click_button(driver, selector, index = 0):
         button.click()
         return True
     except ElementNotInteractableException:
-        print("\n\n\n")
-        print(f'document.querySelectorAll("{selector}")[{index}].click()')
         try:
             driver.execute_script(f'(document.querySelectorAll("{selector}"))[{index}].click()')
             return True

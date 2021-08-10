@@ -3,7 +3,7 @@ import unittest
 from time import sleep
 sys.path.insert(0,'./../../../src/')
 from src.Connection.connect import connect
-from src.Controller.Pages.mangafree.manga_page import walk
+from src.Controller.Pages.mangafree.mangaPage.page import walk
 
 class TestPatternAlternative(unittest.TestCase):
 
