@@ -55,3 +55,8 @@ def verify_total_pages(driver, total):
         sleep(10)
         return (controller_pages(driver, flag= 1))
     return total
+
+def find_image(driver, selector):
+    image = find_element(driver, selector)
+    url_img = image.get_attribute("src")
+    return url_img
