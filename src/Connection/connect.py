@@ -1,9 +1,9 @@
 import sys,os 
-sys.path.insert(0, "./../")
-from Connection.Chrome import connect_chrome as Chrome 
-from Connection.Edge import connect_edge as Edge
-from Tools.Error.Connection import (errorNotFoundBrowser, errorFlagInvalied)
-from Tools.Message.messages import *
+sys.path.insert(0, ".\..\..")
+from src.Connection.Chrome import connect_chrome as Chrome 
+from src.Connection.Edge import connect_edge as Edge
+from src.Tools.Error.Connection import (errorNotFoundBrowser, errorFlagInvalied)
+from src.Tools.Message.messages import *
 
 
 def connect(flag = "--chrome"):

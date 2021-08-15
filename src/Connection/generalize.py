@@ -1,6 +1,6 @@
 import os, sys
-sys.path.insert(0, './../../src/')
-from Tools.Error.Connection import *
+sys.path.insert(0, './../..')
+from src.Tools.Error.Connection import *
 from selenium.common.exceptions import SessionNotCreatedException
 
  

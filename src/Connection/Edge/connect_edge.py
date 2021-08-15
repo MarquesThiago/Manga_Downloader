@@ -1,10 +1,10 @@
 import sys, os 
-sys.path.insert(0, './../../../src/')
+sys.path.insert(0, './../../..')
 from selenium.webdriver import Edge
-from Connection.generalize import *
-from Tools.Error.Connection import * 
+from src.Connection.generalize import *
+from src.Tools.Error.Connection import * 
 from msedge.selenium_tools import EdgeOptions
-from Tools.Router.path import abstract_path as path_abs
+from src.Tools.Router.path import abstract_path as path_abs
 
 
 def connect():

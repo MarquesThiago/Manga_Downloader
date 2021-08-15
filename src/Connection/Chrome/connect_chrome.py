@@ -1,11 +1,11 @@
 import sys, os 
-sys.path.insert(0, './../../../src/')
+sys.path.insert(0, './../../..')
 from selenium.webdriver import Chrome
-from Connection.generalize import *
-from Tools.Error.Connection import * 
+from src.Connection.generalize import *
+from src.Tools.Error.Connection import * 
 from selenium.webdriver import ChromeOptions 
 from selenium.common.exceptions import SessionNotCreatedException
-from Tools.Router.path import abstract_path as path_abs
+from src.Tools.Router.path import abstract_path as path_abs
 
 
 def connect():

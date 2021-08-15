@@ -1,16 +1,15 @@
 import  os, sys
-sys.path.insert(0, "/src/")
+sys.path.insert(0, "..\..")
 from selenium.common.exceptions import ElementNotInteractableException
 from selenium.common.exceptions import JavascriptException
-from Tools.Error.alternate_page import (ErrorIncorrectParseKey, ErrorButtonAlternate)
-from Tools.Error.Common import ErrorUnknown
+from src.Tools.Error.Common import (ErrorUnknown, NotFoundElement)
 
 def find_element(driver, button, index = 0):
     
     try:
         return driver.find_elements_by_css_selector(button)[index]
     except IndexError:
-        ErrorButtonAlternate()
+        NotFoundElement()
     except Exception:
         ErrorUnknown()
     
@@ -26,6 +25,6 @@ def click_button(driver, selector, index = 0):
         except: 
             raise ElementNotInteractableException()
     except IndexError:
-        ErrorButtonAlternate()
+        NotFoundElement()
     except Exception:
         ErrorUnknown()

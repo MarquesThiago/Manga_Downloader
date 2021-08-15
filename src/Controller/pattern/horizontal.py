@@ -5,7 +5,7 @@ from selenium.webdriver.common.keys import Keys
 from Tools.Error.Common import ErrorUnknown
 from selenium.webdriver.chrome.webdriver import WebDriver
 from selenium.webdriver.remote.webelement import WebElement
-from Tools.Error.alternate_page import (ErrorIncorrectParseKey, ErrorButtonAlternate)
+from Tools.Error.alternate_page import (ErrorIncorrectParseKey)
 
 
 def alternate_page(driver, button = None, index = 0, key = None):
