@@ -1,2 +1,4 @@
 name,file,type
 cod_read,cod_read.csv,from_to
+card,manga-free\state_card.csv,from_to
+card-map,manga-free\card_map.csv,from_to

@@ -1,0 +1,14 @@
+name,mapping
+container,.actions-list-container
+items,.actions-list-container .actions-list li
+status,h2
+favorited,.favorite-btn.is_favorite
+btn-favorite,.favorite-btn
+btn-lerei,.lerei[data-tag]
+btn-lido,.lido[data-tag]
+btn-parei,.parei[data-tag]
+btn-lendo,.lendo[data-tag]
+btn-reset,.reset-series
+title,.series-information .title
+chapter,.series-information .chapter strong
+image,.series-image .cover-image

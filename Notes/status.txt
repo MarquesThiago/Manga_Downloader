@@ -1,0 +1,18 @@
+regra: manga-free
+    ****regras dos cards*****
+        se o anime for visto ele esta com a ultima leitura
+        agora se ele for qualquer outro ele tera a proxima leitura então e menos 1 o valor
+
+    ****listagem dos mangas**** 
+        no card lerei: parecem so voltar 58 resultadados 
+        no card visto: retorna todos 
+        nos outros: informações insuficientes 
+    
+    ****images****
+        uma maneira de acessar a urls das images mais facil e utlizando o codigo abaixo
+            
+            document.querySelectorAll(seelctor)[0].style.backgroundImage
+        
+        o resultado vai ser mais ou menos 
+            "url(\"**************\")"
+            

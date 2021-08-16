@@ -1,7 +1,7 @@
 import os, sys
 import requests
-sys.path.insert(0, "./../")
-from Tools.Message.messages import (message_information, message_sucess, message_failed, message_warning)
+sys.path.insert(0, "./../..")
+from src.Tools.Message.messages import (message_information, message_sucess, message_failed, message_warning)
 
 
 def download_images(url, name, page, name_destiny):

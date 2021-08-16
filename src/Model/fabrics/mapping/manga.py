@@ -1,11 +1,13 @@
 
 import os, sys
 sys.path.insert(0, "..\..\..\..")
+from datetime import datetime as dt
 from src.Model.mapping.mapping import from_to as to
 
 def manga(
     name, last_cap = 1, read = None, cod = None, favorite = False, rank = None, status = "in_process"):
 
+    date = dt.now()
 
     def status_read(cod = None , read = None):
 
@@ -56,7 +58,9 @@ def manga(
         "read": read["state"],
         "is_favorite": favorite,
         "ranking": rank,
-        "status": is_complete(status)
+        "status": is_complete(status),
+        "dt_update": f"{date.year}-{date.month}-{date.day}",
+        "dt_update_stamp": f"{date.year}-{date.month}-{date.day} {date.hour}:{date.minute}:{date.second}"
     }
 
 

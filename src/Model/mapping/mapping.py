@@ -16,6 +16,12 @@ def from_to(name):
     except:
         raise NameError("Not Mappied value")
 
+def consult(data, from_, to, value):
+    result = data[(data[from_] == value)][to].iloc[0]
+    return result
+
 # fast test function 
-# if __name__ == "__main__":
-    # print(from_to("cod_read").head())
+if __name__ == "__main__":
+    valeu = input("entry from verify:\n")
+    terms = int(input("qtd. terms:\n"))
+    print(from_to(value).head(terms))
