@@ -19,7 +19,10 @@ def manga_status():
     }
 
 
-    create_table(conn, "manga_status", fields = field)
+    # create_table(conn, "manga_status", fields = field)
+    cursor = conn.cursor()
+    # cursor.execute("ALTER TABLE manga_status ADD COLUMN image varchar(1500)")
+    # conn.commit()
     desc = describe(conn, "manga_status")
     conn.close()
     return desc

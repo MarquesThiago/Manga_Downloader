@@ -4,10 +4,18 @@ from selenium.common.exceptions import ElementNotInteractableException
 from selenium.common.exceptions import JavascriptException
 from src.Tools.Error.Common import (ErrorUnknown, NotFoundElement)
 
-def find_element(driver, button, index = 0):
+def find_element(driver, selector, index = 0):
     
     try:
-        return driver.find_elements_by_css_selector(button)[index]
+        return driver.find_elements_by_css_selector(selector)[index]
+    except IndexError:
+        NotFoundElement()
+    except Exception:
+        ErrorUnknown()
+
+def find_element_all(driver, selector):
+    try:
+        return driver.find_elements_by_css_selector(selector)
     except IndexError:
         NotFoundElement()
     except Exception:
@@ -19,11 +27,23 @@ def click_button(driver, selector, index = 0):
         button.click()
         return True
     except ElementNotInteractableException:
-        try:
-            driver.execute_script(f'(document.querySelectorAll("{selector}"))[{index}].click()')
-            return True
-        except: 
+        click_js(driver, selector, index)
+    except IndexError:
+        NotFoundElement()
+    except Exception:
+        ErrorUnknown()
+
+def click_js(driver, selector, index = 0):
+    try:
+        driver.execute_script(f'(document.querySelectorAll("{selector}"))[{index}].click()')
+        return True
+    except: 
             raise ElementNotInteractableException()
+
+def find_js(driver, selector, index = 0):
+    try:
+        element = driver.execute_script(f'return (document.querySelectorAll("{selector}"))[{index}]')
+        return element
     except IndexError:
         NotFoundElement()
     except Exception:

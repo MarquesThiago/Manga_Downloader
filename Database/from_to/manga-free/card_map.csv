@@ -1,4 +1,6 @@
 name,mapping
+menu-user,.user-menu
+login,.login
 container,.actions-list-container
 items,.actions-list-container .actions-list li
 status,h2
@@ -12,3 +14,4 @@ btn-reset,.reset-series
 title,.series-information .title
 chapter,.series-information .chapter strong
 image,.series-image .cover-image
+ad_widget-warning,.prompt-container .close

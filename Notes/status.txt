@@ -12,7 +12,9 @@ regra: manga-free
         uma maneira de acessar a urls das images mais facil e utlizando o codigo abaixo
             
             document.querySelectorAll(seelctor)[0].style.backgroundImage
-        
+            element.getCssValue("background-image")
+            element..value_of_css_property()
+                
         o resultado vai ser mais ou menos 
             "url(\"**************\")"
             

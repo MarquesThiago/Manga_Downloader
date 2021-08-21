@@ -16,6 +16,7 @@ def login(driver,  user, password, type = "mp"):
         
         click_button(driver, ".login")
         click_button(driver, f".{type}")
+        sleep(7)
         form = find_element(driver, ".login-form")
         email = find_element(form, "input")
         passwrd = find_element(form, "input", index = 1)

@@ -1,5 +1,5 @@
-state,selector_commom,selector_favorite
-lido,.actions-buttons li[data-tag='3'],read
-lendo,.actions-buttons li[data-tag='4'],reading
-lerei,.actions-buttons li[data-tag='1'],wild-read
-parei,.actions-buttons li[data-tag='2'],stopped
+state,selector_common,selector_favorite
+lido,.actions-buttons li[data-tag=\'3\'],read
+lendo,.actions-buttons li[data-tag=\'4\'],reading
+lerei,.actions-buttons li[data-tag=\'1\'],wild-read
+parei,.actions-buttons li[data-tag=\'2\'],stopped

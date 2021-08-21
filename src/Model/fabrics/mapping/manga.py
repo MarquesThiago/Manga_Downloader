@@ -5,7 +5,7 @@ from datetime import datetime as dt
 from src.Model.mapping.mapping import from_to as to
 
 def manga(
-    name, last_cap = 1, read = None, cod = None, favorite = False, rank = None, status = "in_process"):
+    name, last_cap = 1, read = None, cod = None, favorite = False, rank = None, status = "in_process", image = None):
 
     date = dt.now()
 
@@ -48,7 +48,12 @@ def manga(
             pass
         
         return "in process"
-        
+    
+    def check_is_none(element):
+        if element == None:
+            return False
+        return True
+
     read = status_read(cod, read)
 
     manga = {
@@ -56,9 +61,10 @@ def manga(
         "last_chapther": last_cap,
         "cod_read": read["cod"],
         "read": read["state"],
-        "is_favorite": favorite,
+        "is_favorite": check_is_none(favorite),
         "ranking": rank,
         "status": is_complete(status),
+        "image": image,
         "dt_update": f"{date.year}-{date.month}-{date.day}",
         "dt_update_stamp": f"{date.year}-{date.month}-{date.day} {date.hour}:{date.minute}:{date.second}"
     }
